@@ -1,9 +1,9 @@
 '''
  # @ Author: Y. Xiao
- # @ Create Time: 2024-02-11 19:44:07
- # @ Modified by: Your name
- # @ Modified time: 2024-02-11 19:44:47
- # @ Description: Traditional transformer's encoder.
+ # @ Create Time: 2024-02-11 22:52:17
+ # @ Modified by: Y. Xiao
+ # @ Modified time: 2024-02-12 12:38:28
+ # @ Description: Implementation of transformer encoder.
  '''
 
 
@@ -30,7 +30,7 @@ class Embeddings(nn.Module):
 
     def forward(
         self, 
-        x: List
+        x: List[int]
     ):
         # HACK
         # encoder or decoder?
