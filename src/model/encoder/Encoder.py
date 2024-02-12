@@ -36,7 +36,7 @@ class EncoderLayer(nn.Module):
         x: torch.Tensor, 
         mask: torch.Tensor
     ):
-        x = self.sublayers[0](x, self.selfAttn(x, x, x, mask))
+        x = self.sublayers[0](x, lambda x: self.selfAttn(x, x, x, mask))
         return self.sublayers[1](x, self.feedforward)
 
 
